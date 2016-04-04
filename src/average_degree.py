@@ -12,9 +12,7 @@ def parse_time(t):
 	# convert year:day_of_year:hours:min:seconds to seconds
 	return time_struct.tm_year * 365 * 86400 + time_struct.tm_yday * 86400 + time_struct.tm_hour * 3600 + time_struct.tm_min * 60 + time_struct.tm_sec
 
-# Formatting issue, the keys are not properly found in the dictionary
-# i.e. there is a single key 'text”:”Apache”,”indices'
-# Known style limitation: brute force get hashtag string
+# retrieve nodes with hashtags
 def get_hashtags(hashtags):
 	nodes = []
 	for entry in hashtags:
